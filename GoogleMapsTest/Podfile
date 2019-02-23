@@ -9,6 +9,11 @@ target 'GoogleMapsTest' do
   pod 'Firebase/Auth'
   pod 'GoogleSignIn'
   pod 'FirebaseDatabase'
+
+  source 'https://github.com/CocoaPods/Specs.git'
+  pod 'GoogleMaps'
+  pod 'GooglePlaces'
+
   # Pods for GoogleMapsTest
 
 end
