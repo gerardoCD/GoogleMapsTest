@@ -11,8 +11,9 @@
 		C1A2770A2221972200E88100 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A277092221972200E88100 /* ViewController.swift */; };
 		C1A2770D2221972200E88100 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1A2770B2221972200E88100 /* Main.storyboard */; };
 		C1A277102221972200E88100 /* GoogleMapsTest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C1A2770E2221972200E88100 /* GoogleMapsTest.xcdatamodeld */; };
-		C1A277122221972300E88100 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1A277112221972300E88100 /* Assets.xcassets */; };
 		C1A277152221972300E88100 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1A277132221972300E88100 /* LaunchScreen.storyboard */; };
+		C1A2771D2221991F00E88100 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1A2771C2221991F00E88100 /* Assets.xcassets */; };
+		C1A2772122219B3600E88100 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C1A2772022219B3600E88100 /* GoogleService-Info.plist */; };
 		EEEF3E91178EB73A73B6ECC6 /* Pods_GoogleMapsTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B94DFC27A2D2444D57AABF2 /* Pods_GoogleMapsTest.framework */; };
 /* End PBXBuildFile section */
 
@@ -24,9 +25,10 @@
 		C1A277092221972200E88100 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C1A2770C2221972200E88100 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C1A2770F2221972200E88100 /* GoogleMapsTest.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GoogleMapsTest.xcdatamodel; sourceTree = "<group>"; };
-		C1A277112221972300E88100 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C1A277142221972300E88100 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C1A277162221972300E88100 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C1A2771C2221991F00E88100 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../../Downloads/Assets.xcassets; sourceTree = "<group>"; };
+		C1A2772022219B3600E88100 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DB3888737A33024925F05254 /* Pods-GoogleMapsTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoogleMapsTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-GoogleMapsTest/Pods-GoogleMapsTest.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -83,8 +85,9 @@
 				C1A277072221972200E88100 /* AppDelegate.swift */,
 				C1A277092221972200E88100 /* ViewController.swift */,
 				C1A2770B2221972200E88100 /* Main.storyboard */,
-				C1A277112221972300E88100 /* Assets.xcassets */,
 				C1A277132221972300E88100 /* LaunchScreen.storyboard */,
+				C1A2771C2221991F00E88100 /* Assets.xcassets */,
+				C1A2772022219B3600E88100 /* GoogleService-Info.plist */,
 				C1A277162221972300E88100 /* Info.plist */,
 				C1A2770E2221972200E88100 /* GoogleMapsTest.xcdatamodeld */,
 			);
@@ -153,7 +156,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C1A277152221972300E88100 /* LaunchScreen.storyboard in Resources */,
-				C1A277122221972300E88100 /* Assets.xcassets in Resources */,
+				C1A2772122219B3600E88100 /* GoogleService-Info.plist in Resources */,
+				C1A2771D2221991F00E88100 /* Assets.xcassets in Resources */,
 				C1A2770D2221972200E88100 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -401,7 +405,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = UNAM.GoogleMapsTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -420,7 +424,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = UNAM.GoogleMapsTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
