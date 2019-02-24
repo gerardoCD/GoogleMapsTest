@@ -86,7 +86,7 @@ class MapViewController: UIViewController, GIDSignInUIDelegate{
         let Coords = CLLocation(latitude: latitude, longitude: longuitude)
         getAdressName(coords: Coords) { (addressAPI, success) in
             if success == true{
-               self.performSegue(withIdentifier: "segueSave", sender: nil)
+               self.performSegue(withIdentifier: "segueSave", sender: addressAPI)
                 
             }
         }
@@ -136,7 +136,7 @@ class MapViewController: UIViewController, GIDSignInUIDelegate{
         if segue.destination is InfoAddressViewController
         {
          let vc = segue.destination as? InfoAddressViewController
-            
+            vc?.address = (sender as? Address)!
         }
     }
     

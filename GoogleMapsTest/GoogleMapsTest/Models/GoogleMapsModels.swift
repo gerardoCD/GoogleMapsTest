@@ -16,6 +16,7 @@ struct Address{
     var postalCode: String?
     var country: String?
     var subAdministrativeArea:String?
+    var alias: String?
     init(locality:String, thoroughfare:String, subThoroughfare:String, postalCode:String, country:String, subAdministrativeArea:String ) {
         self.locality = locality
         self.thoroughfare = thoroughfare

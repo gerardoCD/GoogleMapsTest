@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C136E884222259D6001396FE /* ExtensionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C136E883222259D6001396FE /* ExtensionViewController.swift */; };
 		C19CDD0C2221C5FD00AB6A9F /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19CDD0B2221C5FD00AB6A9F /* MapViewController.swift */; };
 		C19CDD0E2221C99700AB6A9F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C19CDD0D2221C99700AB6A9F /* CoreLocation.framework */; };
 		C19CDD12222238B700AB6A9F /* GoogleMapsModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19CDD11222238B700AB6A9F /* GoogleMapsModels.swift */; };
@@ -24,6 +25,7 @@
 /* Begin PBXFileReference section */
 		9B94DFC27A2D2444D57AABF2 /* Pods_GoogleMapsTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoogleMapsTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D9B227B2CE0ED93FCAAE65F /* Pods-GoogleMapsTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoogleMapsTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GoogleMapsTest/Pods-GoogleMapsTest.debug.xcconfig"; sourceTree = "<group>"; };
+		C136E883222259D6001396FE /* ExtensionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionViewController.swift; sourceTree = "<group>"; };
 		C19CDD0B2221C5FD00AB6A9F /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		C19CDD0D2221C99700AB6A9F /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		C19CDD11222238B700AB6A9F /* GoogleMapsModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMapsModels.swift; sourceTree = "<group>"; };
@@ -71,6 +73,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		C136E882222259B6001396FE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C136E883222259D6001396FE /* ExtensionViewController.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		C19CDD0F222237A000AB6A9F /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +121,7 @@
 		C1A277062221972200E88100 /* GoogleMapsTest */ = {
 			isa = PBXGroup;
 			children = (
+				C136E882222259B6001396FE /* Extensions */,
 				C19CDD10222238A300AB6A9F /* Models */,
 				C19CDD0F222237A000AB6A9F /* Controllers */,
 				C1A277072221972200E88100 /* AppDelegate.swift */,
@@ -286,6 +297,7 @@
 				C19CDD0C2221C5FD00AB6A9F /* MapViewController.swift in Sources */,
 				C19CDD12222238B700AB6A9F /* GoogleMapsModels.swift in Sources */,
 				C19CDD1422224A6300AB6A9F /* InfoAddressViewController.swift in Sources */,
+				C136E884222259D6001396FE /* ExtensionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

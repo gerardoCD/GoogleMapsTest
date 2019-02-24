@@ -213,7 +213,7 @@
                                     <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 </state>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ALIAS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dCN-oo-gQW">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NickName" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dCN-oo-gQW">
                                 <rect key="frame" x="56" y="452" width="209" height="23"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <color key="textColor" red="0.2242070783" green="0.91023842870000005" blue="0.1237346126" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -273,6 +273,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="95E-aQ-g7p"/>
                     </view>
+                    <connections>
+                        <outlet property="aliasTextField" destination="Bu5-Yr-C4s" id="eow-Ac-9ew"/>
+                        <outlet property="countryTextField" destination="qKS-IF-FIV" id="knc-Td-E3f"/>
+                        <outlet property="localityTextField" destination="NPL-eC-0cR" id="XJU-Ic-gv0"/>
+                        <outlet property="postalCodeTextField" destination="0je-BV-vYB" id="RN5-4S-lMk"/>
+                        <outlet property="subTorougjfanTextField" destination="Zfd-bX-fIy" id="aYL-aO-G5k"/>
+                        <outlet property="thotoughfareTextField" destination="SRC-e5-sde" id="0Z4-AW-3Ti"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Abk-IM-572" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
