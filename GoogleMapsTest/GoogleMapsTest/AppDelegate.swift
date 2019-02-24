@@ -10,6 +10,8 @@ import UIKit
 import CoreData
 import Firebase
 import GoogleSignIn
+import GoogleMaps
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate ,  GIDSignInDelegate{
 
@@ -21,6 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate ,  GIDSignInDelegate{
         FirebaseApp.configure()
         GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
         GIDSignIn.sharedInstance().delegate = self
+        GMSServices.provideAPIKey("AIzaSyD1SZik6Kwff9H-YnFgKzNUCuNXdZ-cR5g")
         return true
     }
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error?) {

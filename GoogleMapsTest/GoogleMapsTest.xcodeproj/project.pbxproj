@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C19CDD0C2221C5FD00AB6A9F /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19CDD0B2221C5FD00AB6A9F /* MapViewController.swift */; };
+		C19CDD0E2221C99700AB6A9F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C19CDD0D2221C99700AB6A9F /* CoreLocation.framework */; };
+		C19CDD12222238B700AB6A9F /* GoogleMapsModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19CDD11222238B700AB6A9F /* GoogleMapsModels.swift */; };
+		C19CDD1422224A6300AB6A9F /* InfoAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19CDD1322224A6300AB6A9F /* InfoAddressViewController.swift */; };
 		C1A277082221972200E88100 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A277072221972200E88100 /* AppDelegate.swift */; };
 		C1A2770A2221972200E88100 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A277092221972200E88100 /* ViewController.swift */; };
 		C1A2770D2221972200E88100 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1A2770B2221972200E88100 /* Main.storyboard */; };
@@ -20,6 +24,10 @@
 /* Begin PBXFileReference section */
 		9B94DFC27A2D2444D57AABF2 /* Pods_GoogleMapsTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoogleMapsTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D9B227B2CE0ED93FCAAE65F /* Pods-GoogleMapsTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoogleMapsTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GoogleMapsTest/Pods-GoogleMapsTest.debug.xcconfig"; sourceTree = "<group>"; };
+		C19CDD0B2221C5FD00AB6A9F /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		C19CDD0D2221C99700AB6A9F /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		C19CDD11222238B700AB6A9F /* GoogleMapsModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMapsModels.swift; sourceTree = "<group>"; };
+		C19CDD1322224A6300AB6A9F /* InfoAddressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoAddressViewController.swift; sourceTree = "<group>"; };
 		C1A277042221972200E88100 /* GoogleMapsTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoogleMapsTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1A277072221972200E88100 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C1A277092221972200E88100 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -37,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C19CDD0E2221C99700AB6A9F /* CoreLocation.framework in Frameworks */,
 				EEEF3E91178EB73A73B6ECC6 /* Pods_GoogleMapsTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -47,6 +56,7 @@
 		6BBD5E0A3FD9FF0C929AF65E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C19CDD0D2221C99700AB6A9F /* CoreLocation.framework */,
 				9B94DFC27A2D2444D57AABF2 /* Pods_GoogleMapsTest.framework */,
 			);
 			name = Frameworks;
@@ -59,6 +69,25 @@
 				DB3888737A33024925F05254 /* Pods-GoogleMapsTest.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		C19CDD0F222237A000AB6A9F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C1A277092221972200E88100 /* ViewController.swift */,
+				C19CDD0B2221C5FD00AB6A9F /* MapViewController.swift */,
+				C19CDD1322224A6300AB6A9F /* InfoAddressViewController.swift */,
+			);
+			name = Controllers;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		C19CDD10222238A300AB6A9F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C19CDD11222238B700AB6A9F /* GoogleMapsModels.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		C1A276FB2221972200E88100 = {
@@ -82,8 +111,9 @@
 		C1A277062221972200E88100 /* GoogleMapsTest */ = {
 			isa = PBXGroup;
 			children = (
+				C19CDD10222238A300AB6A9F /* Models */,
+				C19CDD0F222237A000AB6A9F /* Controllers */,
 				C1A277072221972200E88100 /* AppDelegate.swift */,
-				C1A277092221972200E88100 /* ViewController.swift */,
 				C1A2770B2221972200E88100 /* Main.storyboard */,
 				C1A277132221972300E88100 /* LaunchScreen.storyboard */,
 				C1A2771C2221991F00E88100 /* Assets.xcassets */,
@@ -253,6 +283,9 @@
 				C1A2770A2221972200E88100 /* ViewController.swift in Sources */,
 				C1A277082221972200E88100 /* AppDelegate.swift in Sources */,
 				C1A277102221972200E88100 /* GoogleMapsTest.xcdatamodeld in Sources */,
+				C19CDD0C2221C5FD00AB6A9F /* MapViewController.swift in Sources */,
+				C19CDD12222238B700AB6A9F /* GoogleMapsModels.swift in Sources */,
+				C19CDD1422224A6300AB6A9F /* InfoAddressViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
