@@ -158,7 +158,7 @@
                                 <color key="textColor" red="0.2242070783" green="0.91023842870000005" blue="0.1237346126" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SRC-e5-sde">
+                            <textField opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SRC-e5-sde">
                                 <rect key="frame" x="16" y="161" width="288" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="SRC-e5-sde" secondAttribute="height" multiplier="48:5" id="mCl-HB-9MR"/>
@@ -167,7 +167,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zfd-bX-fIy">
+                            <textField opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zfd-bX-fIy">
                                 <rect key="frame" x="16" y="229" width="288" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Zfd-bX-fIy" secondAttribute="height" multiplier="48:5" id="X9b-bC-NfH"/>
@@ -194,7 +194,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bu5-Yr-C4s">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="hola" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bu5-Yr-C4s">
                                 <rect key="frame" x="16" y="483" width="288" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Bu5-Yr-C4s" secondAttribute="height" multiplier="48:5" id="ayU-Kb-za3"/>
@@ -212,6 +212,9 @@
                                 <state key="normal" title="Save">
                                     <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="btnSave:" destination="98Z-XT-G3f" eventType="touchUpInside" id="IQg-Ot-jHI"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NickName" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dCN-oo-gQW">
                                 <rect key="frame" x="56" y="452" width="209" height="23"/>
@@ -219,14 +222,18 @@
                                 <color key="textColor" red="0.2242070783" green="0.91023842870000005" blue="0.1237346126" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NPL-eC-0cR">
+                            <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NPL-eC-0cR">
                                 <rect key="frame" x="16" y="92" width="288" height="30"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="NPL-eC-0cR" secondAttribute="height" multiplier="48:5" id="XYh-kp-jZ5"/>
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="bbu:" destination="98Z-XT-G3f" eventType="touchUpInside" id="DqC-49-zRQ"/>
+                                </connections>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.069677228990000006" green="0.2069538471" blue="0.62026392490000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -275,11 +282,11 @@
                     </view>
                     <connections>
                         <outlet property="aliasTextField" destination="Bu5-Yr-C4s" id="eow-Ac-9ew"/>
-                        <outlet property="countryTextField" destination="qKS-IF-FIV" id="knc-Td-E3f"/>
-                        <outlet property="localityTextField" destination="NPL-eC-0cR" id="XJU-Ic-gv0"/>
-                        <outlet property="postalCodeTextField" destination="0je-BV-vYB" id="RN5-4S-lMk"/>
-                        <outlet property="subTorougjfanTextField" destination="Zfd-bX-fIy" id="aYL-aO-G5k"/>
-                        <outlet property="thotoughfareTextField" destination="SRC-e5-sde" id="0Z4-AW-3Ti"/>
+                        <outlet property="countryTextField" destination="qKS-IF-FIV" id="0Ev-Ie-cEd"/>
+                        <outlet property="localityTextField" destination="NPL-eC-0cR" id="8xV-Bj-G6Z"/>
+                        <outlet property="postalCodeTextField" destination="0je-BV-vYB" id="lsS-A9-gxB"/>
+                        <outlet property="subTorougjfanTextField" destination="Zfd-bX-fIy" id="S4a-RX-y9L"/>
+                        <outlet property="thotoughfareTextField" destination="SRC-e5-sde" id="H3I-7M-S7f"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Abk-IM-572" userLabel="First Responder" sceneMemberID="firstResponder"/>
