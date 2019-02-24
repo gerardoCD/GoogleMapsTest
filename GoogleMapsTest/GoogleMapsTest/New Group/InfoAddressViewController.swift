@@ -20,17 +20,22 @@ class InfoAddressViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        NotificationCenter.default.addObserver(self, selector: #selector(InfoAddressViewController.keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
-//        NotificationCenter.default.addObserver(self, selector: #selector(InfoAddressViewController.keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(InfoAddressViewController.keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+        aliasTextField.addTarget(self, action: #selector(myTargetFunction), for: UIControl.Event.touchDown)
         
+        countryTextField.addTarget(self, action: #selector(myTargetFunction), for: UIControl.Event.touchDown)
+        
+        postalCodeTextField.addTarget(self, action: #selector(myTargetFunction), for: UIControl.Event.touchDown)
         self.hideKeyboardWhenTappedAround()
     }
     
- 
-    
-    @IBAction func bbu(_ sender: UITextField) {
-        debugPrint("Hola")
+    @objc func myTargetFunction(textField: UITextField) {
+   
+        moveTextField(textField, moveDistance: -250, up: true)
+        
     }
+    
+
     
     
     override func viewDidAppear(_ animated: Bool) {
@@ -40,14 +45,31 @@ class InfoAddressViewController: UIViewController {
         postalCodeTextField.text = address.postalCode
         countryTextField.text = address.country
         aliasTextField.text = address.alias
+        
+    }
+    
+    // Move the text field in a pretty animation!
+    func moveTextField(_ textField: UITextField, moveDistance: Int, up: Bool) {
+        let moveDuration = 0.3
+        let movement: CGFloat = CGFloat(up ? moveDistance : -moveDistance)
+        
+        UIView.beginAnimations("animateTextField", context: nil)
+        UIView.setAnimationBeginsFromCurrentState(true)
+        UIView.setAnimationDuration(moveDuration)
+        self.view.frame = self.view.frame.offsetBy(dx: 0, dy: movement)
+        UIView.commitAnimations()
     }
     
     @objc func keyboardWillShow(notification: NSNotification) {
-        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
-            if self.view.frame.origin.y == 0 {
-                self.view.frame.origin.y -= keyboardSize.height
+   
+
+            if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+                if self.view.frame.origin.y == 0 {
+                    self.view.frame.origin.y -= keyboardSize.height
+                }
             }
-        }
+        
+
     }
     
     @objc func keyboardWillHide(notification: NSNotification) {
@@ -55,7 +77,7 @@ class InfoAddressViewController: UIViewController {
             self.view.frame.origin.y = 0
         }
     }
-    
+
     
     @IBAction func btnSave(_ sender: UIButton) {
         
@@ -64,22 +86,25 @@ class InfoAddressViewController: UIViewController {
                 guard let uid = Auth.auth().currentUser?.uid else { return }
                 let ref = Database.database().reference().child("users/\(uid)")
                 let key = ref.childByAutoId().key
-                let push = [key:
-                    ["locality": address.locality,
-                     "thoroughfare": address.thoroughfare,
-                     "subthoroughfare": address.subThoroughfare,
-                     "postalcode": address.postalCode,
-                     "country": address.country,
-                     "alias": address.alias
+                let pop = [key:
+                    ["locality": localityTextField.text ,
+                     "thoroughfare": thotoughfareTextField.text,
+                     "subthoroughfare": subTorougjfanTextField.text ,
+                     "postalcode": postalCodeTextField.text,
+                     "country": countryTextField.text,
+                     "alias": aliasTextField.text
                         
                     ]
                     ] as! [String:Any]
                 
-                ref.setValue(push)
+                ref.updateChildValues(pop)
                 
                 let alert = UIAlertController(title: "Congratulations", message: "You have a new adrress saved", preferredStyle: .alert)
-                alert.addAction(UIAlertAction(title: "Yes", style: UIAlertAction.Style.default, handler: nil))
+                alert.addAction(UIAlertAction(title: "Yes", style: UIAlertAction.Style.default, handler: {(alert: UIAlertAction!) in  self.navigationController?.popViewController(animated: true)}))
                 self.present(alert, animated: true, completion: nil)
+                
+              
+                
                 
             }else{
                 let alert = UIAlertController(title: "You're no loged", message: "Login before to try after", preferredStyle: .alert)

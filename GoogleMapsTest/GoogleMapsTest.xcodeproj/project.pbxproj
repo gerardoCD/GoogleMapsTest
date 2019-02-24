@@ -19,6 +19,9 @@
 		C1A277152221972300E88100 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1A277132221972300E88100 /* LaunchScreen.storyboard */; };
 		C1A2771D2221991F00E88100 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1A2771C2221991F00E88100 /* Assets.xcassets */; };
 		C1A2772122219B3600E88100 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C1A2772022219B3600E88100 /* GoogleService-Info.plist */; };
+		C1BDE2082222ED8100E23F8A /* TableListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BDE2072222ED8100E23F8A /* TableListViewController.swift */; };
+		C1BDE20B2222F97F00E23F8A /* BasicInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BDE20A2222F97F00E23F8A /* BasicInfoTableViewCell.swift */; };
+		C1BDE20D2222FDF100E23F8A /* AllInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BDE20C2222FDF100E23F8A /* AllInfoViewController.swift */; };
 		EEEF3E91178EB73A73B6ECC6 /* Pods_GoogleMapsTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B94DFC27A2D2444D57AABF2 /* Pods_GoogleMapsTest.framework */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +42,9 @@
 		C1A277162221972300E88100 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C1A2771C2221991F00E88100 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../../Downloads/Assets.xcassets; sourceTree = "<group>"; };
 		C1A2772022219B3600E88100 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C1BDE2072222ED8100E23F8A /* TableListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableListViewController.swift; sourceTree = "<group>"; };
+		C1BDE20A2222F97F00E23F8A /* BasicInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicInfoTableViewCell.swift; sourceTree = "<group>"; };
+		C1BDE20C2222FDF100E23F8A /* AllInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllInfoViewController.swift; sourceTree = "<group>"; };
 		DB3888737A33024925F05254 /* Pods-GoogleMapsTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoogleMapsTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-GoogleMapsTest/Pods-GoogleMapsTest.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -84,9 +90,12 @@
 		C19CDD0F222237A000AB6A9F /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				C1BDE2092222F96100E23F8A /* CustomCells */,
 				C1A277092221972200E88100 /* ViewController.swift */,
 				C19CDD0B2221C5FD00AB6A9F /* MapViewController.swift */,
 				C19CDD1322224A6300AB6A9F /* InfoAddressViewController.swift */,
+				C1BDE2072222ED8100E23F8A /* TableListViewController.swift */,
+				C1BDE20C2222FDF100E23F8A /* AllInfoViewController.swift */,
 			);
 			name = Controllers;
 			path = "New Group";
@@ -133,6 +142,14 @@
 				C1A2770E2221972200E88100 /* GoogleMapsTest.xcdatamodeld */,
 			);
 			path = GoogleMapsTest;
+			sourceTree = "<group>";
+		};
+		C1BDE2092222F96100E23F8A /* CustomCells */ = {
+			isa = PBXGroup;
+			children = (
+				C1BDE20A2222F97F00E23F8A /* BasicInfoTableViewCell.swift */,
+			);
+			path = CustomCells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -293,10 +310,13 @@
 			files = (
 				C1A2770A2221972200E88100 /* ViewController.swift in Sources */,
 				C1A277082221972200E88100 /* AppDelegate.swift in Sources */,
+				C1BDE20D2222FDF100E23F8A /* AllInfoViewController.swift in Sources */,
 				C1A277102221972200E88100 /* GoogleMapsTest.xcdatamodeld in Sources */,
+				C1BDE2082222ED8100E23F8A /* TableListViewController.swift in Sources */,
 				C19CDD0C2221C5FD00AB6A9F /* MapViewController.swift in Sources */,
 				C19CDD12222238B700AB6A9F /* GoogleMapsModels.swift in Sources */,
 				C19CDD1422224A6300AB6A9F /* InfoAddressViewController.swift in Sources */,
+				C1BDE20B2222F97F00E23F8A /* BasicInfoTableViewCell.swift in Sources */,
 				C136E884222259D6001396FE /* ExtensionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

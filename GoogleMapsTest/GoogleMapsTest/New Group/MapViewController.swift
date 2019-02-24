@@ -26,31 +26,36 @@ class MapViewController: UIViewController, GIDSignInUIDelegate{
     override func viewDidLoad() {
      
       locationManager.requestWhenInUseAuthorization()
-      locationManager.startUpdatingLocation()
-      if( CLLocationManager.authorizationStatus() == .authorizedWhenInUse ||
-            CLLocationManager.authorizationStatus() ==  .authorizedAlways){
-        
-        latitude = (locationManager.location?.coordinate.latitude)!
-        longuitude = (locationManager.location?.coordinate.longitude)!
-        
-        let camera = GMSCameraPosition.camera(withLatitude: latitude,longitude: longuitude, zoom: 17)
-        let mapView = GMSMapView.map(withFrame:  CGRect(origin: CGPoint(x: 0,y :0), size: CGSize(width: secoundView.frame.width, height: secoundView.frame.height)),camera: camera)
-        mapView.settings.myLocationButton = true
-        mapView.isMyLocationEnabled = true
-        secoundView.addSubview(mapView)
-        
-        let markerPosition = GMSMarker()
-        markerPosition.position = camera.target
-        markerPosition.map = mapView
-        
-        //Location Manager code to fetch current location
-        self.locationManager.delegate = self as? CLLocationManagerDelegate
-        
-        
-        }
+      
         
         
 
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        locationManager.startUpdatingLocation()
+        
+        if( CLLocationManager.authorizationStatus() == .authorizedWhenInUse ||
+            CLLocationManager.authorizationStatus() ==  .authorizedAlways){
+            
+            latitude = (locationManager.location?.coordinate.latitude)!
+            longuitude = (locationManager.location?.coordinate.longitude)!
+            
+            let camera = GMSCameraPosition.camera(withLatitude: latitude,longitude: longuitude, zoom: 17)
+            let mapView = GMSMapView.map(withFrame:  CGRect(origin: CGPoint(x: 0,y :0), size: CGSize(width: secoundView.frame.width, height: secoundView.frame.height)),camera: camera)
+            mapView.settings.myLocationButton = true
+            mapView.isMyLocationEnabled = true
+            secoundView.addSubview(mapView)
+            
+            let markerPosition = GMSMarker()
+            markerPosition.position = camera.target
+            markerPosition.map = mapView
+            
+            //Location Manager code to fetch current location
+            self.locationManager.delegate = self as? CLLocationManagerDelegate
+            
+            
+        }
     }
     
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
@@ -95,6 +100,7 @@ class MapViewController: UIViewController, GIDSignInUIDelegate{
 
 
     @IBAction func btnSaved(_ sender: Any) {
+        performSegue(withIdentifier: "segueSaved", sender: nil)
     }
     
     func getAdressName(coords: CLLocation, completion: @escaping (_ address: Address?,Bool) -> Void){
